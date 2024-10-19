@@ -114,8 +114,13 @@ function identifyVisitor(){
 
 //This is page view
 function pageView(){
-  mootrack('trackPageView');
-  document.getElementById('log').value += '[' + new Date().toUTCString() + ']' + ' Page has been tracked...' + "\n";
+  try{
+    mootrack('trackPageView');
+    document.getElementById('log').value += '[' + new Date().toUTCString() + ']' + ' Page has been tracked...' + "\n";
+  }
+  catch {
+    document.getElementById('log').value += '[' + new Date().toUTCString() + ']' + ' Somethign went wrong, please check browsers Network tab' + "\n";
+  }
 }
 
 // This is Add to Cart script
