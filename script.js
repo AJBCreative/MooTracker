@@ -89,7 +89,7 @@ function emptyCookies(){
 //This is the initialise script
 function mooInit(){
   var websiteCode = document.getElementById('websitecode').value;
- //for testing c9bf849e-74cf-4c69-be34-1229156db12f
+  //the value in website code must be the given website ID from Moosend "Websites" section
   mootrack('init', websiteCode);
   console.log(websiteCode);
   if(document.cookie.indexOf('uid=') == -1){
